@@ -26,43 +26,62 @@ echo DebugDan's Modpack Launcher
 echo.
 echo Downloading Microsoft Visual C++....
 echo.
-curl.exe -o visualinstaller.exe https://aka.ms/vs/17/release/vc_redist.x64.exe
+curl.exe -Lo visualinstaller.exe "https://aka.ms/vs/17/release/vc_redist.x64.exe"
 echo.
 echo Installing Microsoft Visual C++....
 echo.
 start visualinstaller.exe
-echo The installer should have opened. If it says 'Modify Setup', hit 'Close' and then 'Yes' because you already have this installed. If not, select that you 'agree to the license terms and conditions', and then select 'Install'. If User Account Control ever pops up throughout the rest of this process, hit 'Yes'.
+echo The installer should have opened. 
+echo If it says 'Modify Setup', hit 'Close' and then 'Yes' because you already have this installed.
+echo If not, select that you 'agree to the license terms and conditions', and then select 'Install'. 
+echo If User Account Control ever pops up throughout the rest of this process, hit 'Yes'.
 echo.
 pause
 echo.
 echo Once it says Setup Successful, hit 'Close' and proceed.
 echo.
 pause
+del /q visualinstaller.exe
+cls
+echo DebugDan's Modpack Launcher
 echo.
 echo Downloading Eclipse Adoptium....
 echo.
-curl.exe -o javainstaller.msi https://debug-dan.github.io/modpack-updater/javainstaller.msi
+curl.exe -Lo javainstaller.msi "https://drive.usercontent.google.com/download?id=16x2sVUWdGbz0Qdr2NBx5U5g11fmq70Ee&export=download&authuser=0&confirm=t&uuid=748b0b9f-842d-4653-a68f-b2551495c56e&at=APZUnTW7nrRwsfxinZveylGlHHzW:1714086765820"
 echo.
 echo Installing Eclipse Adoptium....
 echo.
 start javainstaller.msi
 echo.
-echo The installer should have opened. Hit 'Next'. If it says 'Change, repair, or remove installation', hit 'Cancel', 'Yes', and then 'Finish'. If not, hit 'Next', and 'Install'. When it's done, hit 'Finish'.
+echo The installer should have opened. Hit 'Next'. 
+echo If it says 'Change, repair, or remove installation', hit 'Cancel', 'Yes', and then 'Finish'. 
+echo If not, hit 'Next', and 'Install'. When it's done, hit 'Finish'.
 echo.
 pause
+del /q javainstaller.msi
+cls
+echo DebugDan's Modpack Launcher
 echo.
 echo Downloading Prism Launcher....
 echo.
-curl.exe -o prisminstaller.exe https://github.com/PrismLauncher/PrismLauncher/releases/download/8.3/PrismLauncher-Windows-MSVC-Setup-8.3.exe
+curl.exe -Lo prisminstaller.exe https://github.com/PrismLauncher/PrismLauncher/releases/download/8.3/PrismLauncher-Windows-MSVC-Setup-8.3.exe
 echo.
 echo Installing Prism Launcher....
 echo.
 start prisminstaller.exe
-echo The installer should have opened. Hit 'Next', 'Next', 'Install', and 'Finish'. When Prism Launcher opens, hit 'Next' and then proceed to the next step.
+echo The installer should have opened. 
+echo Hit 'Next', 'Next', 'Install', and 'Finish'. When Prism Launcher opens, hit 'Next' and then proceed to the next step.
 echo.
 pause
+del /q prisminstaller.exe
+cls
+echo DebugDan's Modpack Launcher
 echo.
-echo Choose the version of Java you just installed. The version should start with '17', the architecture should be 'amd64', and the path should contain "Program Files/Eclipse Adoptium'. If you have 16gb or more of RAM on your computer, change the 'maximum memory allocation' to '8192 MiB'.
+echo Choose the version of Java you just installed. Tips:
+echo The version should start with '17'
+echo The architecture should be 'amd64'
+echo The path should contain "Program Files/Eclipse Adoptium'
+echo If you have 16gb or more of RAM on your computer, change the 'maximum memory allocation' to '8192 MiB'.
 echo.
 pause
 echo.
@@ -158,7 +177,7 @@ cd %appdata%
 cd PrismLauncher
 cd instances
 rmdir /s /q PlasmaticPack
-curl.exe -o installplasmatic.exe https://debug-dan.github.io/modpack-updater/installplasmatic.exe
+curl.exe -Lo installplasmatic.exe https://debug-dan.github.io/modpack-updater/installplasmatic.exe
 echo.
 echo Installing Plasmatic Pack....
 echo.
@@ -192,7 +211,7 @@ cd instances
 cd PlasmaticPack
 rmdir /s /q mods
 cd..
-curl.exe -o updateplasmatic.exe https://debug-dan.github.io/modpack-updater/updateplasmatic.exe
+curl.exe -Lo updateplasmatic.exe https://debug-dan.github.io/modpack-updater/updateplasmatic.exe
 echo.
 echo Updating Plasmatic Pack....
 echo.
