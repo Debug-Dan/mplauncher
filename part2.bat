@@ -177,12 +177,13 @@ cd %appdata%
 cd PrismLauncher
 cd instances
 rmdir /s /q PlasmaticPack
-curl.exe -Lo installplasmatic.exe https://debug-dan.github.io/modpack-updater/installplasmatic.exe
+curl.exe -Lo installplasmatic.exe "https://drive.usercontent.google.com/download?id=1kCPT8BDzPTv5Ic7ezvH6bMDs99JGWGbb&export=download&authuser=0&confirm=t&uuid=b84b92a0-414e-429e-85f9-78c781ea3dbb&at=APZUnTWK4QCi2mDi9jSYItqoLshZ:1714177195087"
 echo.
 echo Installing Plasmatic Pack....
 echo.
 start installplasmatic.exe
 echo A 7-Zip window should have opened. Please select 'Extract' and then 'Yes to All' (if applicable)
+echo Please continue only once the extraction is completed.
 pause
 del /q installplasmatic.exe
 echo.
@@ -211,12 +212,13 @@ cd instances
 cd PlasmaticPack
 rmdir /s /q mods
 cd..
-curl.exe -Lo updateplasmatic.exe https://debug-dan.github.io/modpack-updater/updateplasmatic.exe
+curl.exe -Lo updateplasmatic.exe "https://drive.usercontent.google.com/download?id=1NzHtV0TxGyHJBc84kYRdl9tW83rFsCKe&export=download&authuser=0&confirm=t&uuid=92e8f110-ae7d-421e-b83b-03d24176c3a9&at=APZUnTUADRIXkssz22JAGi2caEin:1714177258648"
 echo.
 echo Updating Plasmatic Pack....
 echo.
 start updateplasmatic.exe
-echo A 7-Zip window should have opened. Please select 'Extract' and then 'Yes to All' (if applicable)
+echo A 7-Zip window should have opened. Please select 'Extract' and then 'Yes to All' (if applicable).
+echo Please continue only once the extraction is completed.
 pause
 del /q updateplasmatic.exe
 echo.
@@ -242,5 +244,5 @@ cls
 cd %localappdata%
 cd Programs
 cd PrismLauncher
-start prismlauncher.exe --launch "TST Modpack"
+start prismlauncher.exe --launch "PlasmaticPack"
 exit
