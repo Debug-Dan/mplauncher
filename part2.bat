@@ -1,5 +1,5 @@
 @echo off
-title Modpack Launcher v1.2
+title Modpack Launcher v1.3
 pushd
 goto Start
 
