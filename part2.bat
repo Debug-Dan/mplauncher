@@ -122,7 +122,7 @@ echo.
 echo Occasionally, you get signed out of your Microsoft Account automatically in Prism Launcher. This semi-automated guide will help you fix this issue. When you continue to the next step, Prism Launcher will open. Go back to this window to view the instructions on what to do.
 echo.
 pause
-cd..
+cd ..\
 start part3.bat
 echo.
 echo Prism Launcher should have just opened. Follow these instructions:
