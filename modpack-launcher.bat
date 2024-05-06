@@ -5,5 +5,4 @@ echo.
 mkdir "modpack-launcher-files"
 cd modpack-launcher-files
 curl.exe -o part2.bat https://debug-dan.github.io/modpack-updater/part2.bat
-curl.exe -o part3.bat https://debug-dan.github.io/modpack-updater/part3.bat
 start part2.bat

@@ -124,6 +124,7 @@ echo Occasionally, you get signed out of your Microsoft Account automatically in
 echo.
 pause
 popd
+curl.exe -Lo part3.bat https://debug-dan.github.io/modpack-updater/part3.bat
 start part3.bat
 echo.
 echo Prism Launcher should have just opened. Follow these instructions:
