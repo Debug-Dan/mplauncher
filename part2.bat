@@ -124,23 +124,12 @@ echo.
 pause
 start part3.bat
 echo.
-echo Prism Launcher should have just opened. Hit the account name in the top right corner and select 'Manage Accounts'
-echo.
-pause
-echo.
-echo Select 'Add Microsoft' on the top right. It should automatically open a webpage, but if it doesn't, hit open page and copy code.
-echo.
-pause
-echo.
-echo Go to the browser window that just opened up. If the code is already in there, hit 'Next'. If the code is not in there, paste the code and then hit 'Next'.
-echo.
-pause
-echo.
-echo Sign into your Microsoft account (that has Minecraft on it). When it asks to let this app access your info, hit accept.
-echo.
-pause
-echo.
-echo You should now be signed in! You can close the browser window and Prism Launcher and re-attempt to launch the modpack.
+echo Prism Launcher should have just opened. Follow these instructions:
+echo 1 - Hit the account name in the top right corner and select 'Manage Accounts'
+echo 2 - Select 'Add Microsoft' on the top right. It should automatically open a webpage, but if it doesn't, hit open page and copy code.
+echo 3 - Go to the browser window that just opened up. If the code is already in there, hit 'Next'. If the code is not in there, paste the code and then hit 'Next'.
+echo 4 - Sign into your Microsoft account (that has Minecraft on it). When it asks to let this app access your info, hit accept.
+echo 5 - You should now be signed in! You can close the browser window and Prism Launcher and re-attempt to launch the modpack.
 echo.
 pause
 goto Troubleshoot
