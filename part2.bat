@@ -1,5 +1,5 @@
 @echo off
-title Modpack Launcher v1.4
+title Modpack Launcher v1.5
 pushd
 goto Start
 
@@ -203,7 +203,6 @@ cd PrismLauncher
 cd instances
 cd PlasmaticPack
 rmdir /s /q mods
-cd..
 curl.exe -Lo updateplasmatic.exe "https://drive.usercontent.google.com/download?id=1NzHtV0TxGyHJBc84kYRdl9tW83rFsCKe&export=download&authuser=0&confirm=t&uuid=92e8f110-ae7d-421e-b83b-03d24176c3a9&at=APZUnTUADRIXkssz22JAGi2caEin:1714177258648"
 echo.
 echo Updating Plasmatic Pack....
