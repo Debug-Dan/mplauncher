@@ -1,0 +1,19 @@
+<title>Modpack Launcher</title>
+<h1>Modpack Launcher</h1>
+<p>Q: Is this a virus?</p>
+<p>A: <strong>This launcher is not a virus</strong>. I know that .bat files can typically be associated with viruses, trojans, spam, etc. I have a lot of experience in making batch files and honestly it was easier to make an extremely lightweight launcher out of what is essentially command prompt code versus making an entire .exe program.</p>
+<p>For the purpose of transparency, this launcher does download files from the internet, and I know that can come across as extremely scary because theoretically the launcher could download anything it wanted. Because of this, the launcher could theoretically not contain any harmful code right now and then at a later date be updated to have harmful code. My counter to this claim is that basically any program you have installed on your computer could do the same and this file is no different.</p>
+<p><span style="text-decoration: underline;">Here is a detailed list of what this launcher will download from the internet:</span></p>
+<ol>
+<li><strong>An updated version of itself.</strong> This is required to add new options to the troubleshooter, new features, and also to add updated download links to newer versions of the modpacks. Because many modpacks in the launcher are stored on Google Drive, each update to the modpack is a new download link and therefore must be updated.</li>
+<li><strong>Prism Launcher &amp; its dependancies.</strong> This launcher piggybacks on Prism Launcher to launch modpack instances and therefore has an automated setup for installing it.</li>
+<li><strong>Modpack files.</strong> More specifically, it downloads a 7-zip self-extracting archive. A 'self-extracting archive' is a feature of 7-zip that is basically just a .zip/.7z archive file but in the .exe format so it can extract itself.</li>
+</ol>
+<p><span style="text-decoration: underline;">Here is a detailed list of what files this launcher has access to on your local machine:</span></p>
+<ol>
+<li><strong>The folder you place 'modpack-launcher.bat'.</strong> It downloads files here and creates a new folder called 'modpack-launcher-files' for storing dependancies for the launcher.</li>
+<li><strong>'%localappdata%/Programs/PrismLauncher'.</strong> This is the Prism Launcher install directory. The launcher does this to launch modpack instances.</li>
+<li><strong>'%appdata%/PrismLauncher/instances'.</strong> This is the location where Prism Launcher has the instances. The launcher does this to install/update/delete instances</li>
+</ol>
+<p>I hope this helped to answer your question :)</p>
+<p><a href="https://debug-dan.github.io/modpack-updater">&lt;- Click to return</a></p>
