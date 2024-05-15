@@ -11,12 +11,12 @@ echo Please select an option:
 echo 1. Launch a modpack
 echo 2. Update an existing modpack
 echo 3. Install a new modpack
-echo 4. Troubleshoot an issue
-echo 5. Install/Update Prism Launcher
+echo 4. Link/re-link Microsoft Account
+echo 5. Install/update Prism Launcher
 echo.
 choice /c 12345 /n /m ">> "
 if errorlevel 5 goto PrismLauncher
-if errorlevel 4 goto Troubleshoot
+if errorlevel 4 goto MicrosoftAccount
 if errorlevel 3 goto Install
 if errorlevel 2 goto Update
 if errorlevel 1 goto Launch
@@ -91,51 +91,27 @@ echo.
 pause
 goto Start
 
-:Troubleshoot
+:MicrosoftAccount
 cls
 echo DebugDan's Modpack Launcher
 echo.
-echo Having issues? If avaliable, select your issue below:
-echo 1. Installation/Update/Launch fails or just isn't working
-echo 2. Game keeps trying to launch in 'Offline Mode'
-echo 3. Return to main menu
-echo.
-choice /c 123 /n /m ">> "
-if errorlevel 3 goto Start
-if errorlevel 2 goto Issue2
-if errorlevel 1 goto Issue1
-
-:Issue1
-cls
-echo DebugDan's Modpack Launcher
-echo.
-echo Prism Launcher must be installed to play, as this launcher uses it to launch your modpack instance. You can install Prism Launcher using the 5th option on the main menu. 
-echo.
-echo Additionally, Prism Launcher MUST be installed in its DEFAULT DIRECTORY or else this launcher will not work. If you previously installed Prism Launcher to any other location on your main drive, or any location on a secondary drive, it will not work. This is simple to fix, just uninstall your old version of Prism Launcher from windows settings and then use this launcher to install Prism using the 5th option on the main menu.
-echo.
-pause
-goto Troubleshoot
-
-:Issue2
-cls
-echo DebugDan's Modpack Launcher
-echo.
-echo Occasionally, you get signed out of your Microsoft Account automatically in Prism Launcher. This semi-automated guide will help you fix this issue. When you continue to the next step, Prism Launcher will open. Go back to this window to view the instructions on what to do.
-echo.
-pause
 popd
 curl.exe -Lo part3.bat https://debug-dan.github.io/modpack-updater/part3.bat
 start part3.bat
+cls
+echo DebugDan's Modpack Launcher
 echo.
 echo Prism Launcher should have just opened. Follow these instructions:
 echo 1 - Hit the account name in the top right corner and select 'Manage Accounts'
-echo 2 - Select 'Add Microsoft' on the top right. It should automatically open a webpage, but if it doesn't, hit open page and copy code.
-echo 3 - Go to the browser window that just opened up. If the code is already in there, hit 'Next'. If the code is not in there, paste the code and then hit 'Next'.
+echo 2 - Select 'Add Microsoft' on the top right. 
+echo 3 - It should automatically open a webpage; if it doesn't, hit open page and copy code.
+echo 4 - Go to the browser window that just opened up. 
+echo 5 - If the code is already in there, hit 'Next'. If the code is not in there, paste the code and then hit 'Next'.
 echo 4 - Sign into your Microsoft account (that has Minecraft on it). When it asks to let this app access your info, hit accept.
 echo 5 - You should now be signed in! You can close the browser window and Prism Launcher and re-attempt to launch the modpack.
 echo.
 pause
-goto Troubleshoot
+goto Start
 
 :Install
 cls
@@ -222,7 +198,7 @@ goto Start
 cls
 echo DebugDan's Modpack Launcher
 echo.
-echo NOTE: If Prism Launcher tries to load your account in 'Offline Mode', then you need to re-add your Microsoft Account or else you won't be able to play online. If this happens, select 'troubleshoot an issue' on the main menu.
+echo NOTE: If a window pops up asking you to "Choose your offline mode player name", you have to hit 'Cancel' and re-link your Microsoft Account by selecting option 4 in the main menu!
 echo.
 echo Select a modpack to launch:
 echo 1. Plasmatic Pack
