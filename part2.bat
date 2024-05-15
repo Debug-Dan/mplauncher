@@ -198,7 +198,7 @@ goto Start
 cls
 echo DebugDan's Modpack Launcher
 echo.
-echo NOTE: If a window pops up asking you to "Choose your offline mode player name", you have to hit 'Cancel' and re-link your Microsoft Account by selecting option 4 in the main menu!
+echo NOTE: If a window pops up asking you to "Choose your offline mode player name", try relaunching. If it says the same thing again, you have to hit 'Cancel' and re-link your Microsoft Account by selecting option 4 in the main menu!
 echo.
 echo Select a modpack to launch:
 echo 1. Plasmatic Pack
