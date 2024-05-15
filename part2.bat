@@ -1,5 +1,5 @@
 @echo off
-title Modpack Launcher v1.7
+title Modpack Launcher v1.8
 pushd
 goto Start
 
@@ -103,12 +103,13 @@ echo DebugDan's Modpack Launcher
 echo.
 echo Prism Launcher should have just opened. Follow these instructions:
 echo 1 - Hit the account name in the top right corner and select 'Manage Accounts'
-echo 2 - Select 'Add Microsoft' on the top right. 
-echo 3 - It should automatically open a webpage; if it doesn't, hit open page and copy code.
-echo 4 - Go to the browser window that just opened up. 
-echo 5 - If the code is already in there, hit 'Next'. If the code is not in there, paste the code and then hit 'Next'.
-echo 4 - Sign into your Microsoft account (that has Minecraft on it). When it asks to let this app access your info, hit accept.
-echo 5 - You should now be signed in! You can close the browser window and Prism Launcher and re-attempt to launch the modpack.
+echo 2 - You can try clicking your already added account and hitting "Refresh".
+echo 3 - If that doesn't work, select 'Add Microsoft' on the top right. 
+echo 4 - It should automatically open a webpage; if it doesn't, hit open page and copy code.
+echo 5 - Go to the browser window that just opened up. 
+echo 6 - If the code is already in there, hit 'Next'. If the code is not in there, paste the code and then hit 'Next'.
+echo 7 - Sign into your Microsoft account (that has Minecraft on it). When it asks to let this app access your info, hit accept.
+echo 8 - You should now be signed in! You can close the browser window and Prism Launcher and re-attempt to launch the modpack.
 echo.
 pause
 goto Start
