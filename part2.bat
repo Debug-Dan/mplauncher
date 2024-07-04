@@ -56,7 +56,7 @@ echo MPLauncher
 echo.
 echo Downloading Eclipse Adoptium....
 echo.
-curl.exe -Lo javainstaller.msi "https://drive.usercontent.google.com/download?id=16x2sVUWdGbz0Qdr2NBx5U5g11fmq70Ee&export=download&authuser=0&confirm=t&uuid=748b0b9f-842d-4653-a68f-b2551495c56e&at=APZUnTW7nrRwsfxinZveylGlHHzW:1714086765820"
+curl.exe -Lo javainstaller.msi "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.11%2B9/OpenJDK17U-jdk_x64_windows_hotspot_17.0.11_9.msi"
 echo.
 echo Installing Eclipse Adoptium....
 echo.
