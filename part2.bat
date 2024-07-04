@@ -4,8 +4,9 @@ pushd
 goto Start
 
 :Start
+popd
 cls
-echo MPLauncher  (L24.7.4c)
+echo MPLauncher  (L24.7.4e)
 echo.
 echo Please select an option:
 echo 1. Launch an installed modpack
