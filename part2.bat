@@ -1,11 +1,11 @@
 @echo off
-title Modpack Launcher v1.10
+title MPLauncher
 pushd
 goto Start
 
 :Start
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher  (L24.7.3)
 echo.
 echo Please select an option:
 echo 1. Launch a modpack
@@ -23,7 +23,7 @@ if errorlevel 1 goto Launch
 
 :PrismLauncher
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher
 echo.
 echo Downloading Microsoft Visual C++....
 echo.
@@ -44,7 +44,7 @@ echo.
 pause
 del /q visualinstaller.exe
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher
 echo.
 echo Downloading Eclipse Adoptium....
 echo.
@@ -61,7 +61,7 @@ echo.
 pause
 del /q javainstaller.msi
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher
 echo.
 echo Downloading Prism Launcher....
 echo.
@@ -76,7 +76,7 @@ echo.
 pause
 del /q prisminstaller.exe
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher
 echo.
 echo Choose the version of Java you just installed. Tips:
 echo The version should start with '17'
@@ -93,13 +93,13 @@ goto Start
 
 :MicrosoftAccount
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher
 echo.
 popd
-curl.exe -Lo part3.bat https://debug-dan.github.io/modpack-updater/part3.bat
+curl.exe -Lo part3.bat https://debug-dan.github.io/mplauncher/part3.bat
 start part3.bat
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher
 echo.
 echo Prism Launcher should have just opened. Follow these instructions:
 echo 1 - Hit the account name in the top right corner and select 'Manage Accounts'
@@ -115,9 +115,10 @@ goto Start
 
 :Install
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher
 echo.
-echo WARNING: This is only for first time use! Installing a new modpack instance will erase any existing instance by the same name, including any save data, user data, options, waypoints, etc.
+echo WARNING: This is only for first time use! 
+echo Installing a new modpack instance will erase any existing instance by the same name, including any save data, user data, options, waypoints, etc.
 echo.
 echo Are you sure you want to proceed?
 echo 1. Yes
@@ -128,67 +129,67 @@ if errorlevel 1 goto ConfirmInstall
 
 :ConfirmInstall
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher
 echo.
 echo Which modpack would you like to install?
-echo 1. Plasmatic Pack
+echo 1. TSTPack
 choice /c 1 /n /m ">> "
-if errorlevel 1 goto InstallPlasmatic
+if errorlevel 1 goto InstallTST
 
-:InstallPlasmatic
+:InstallTST
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher
 echo.
-echo Downloading Plasmatic Pack....
+echo Downloading TSTPack....
 echo.
 cd %appdata%
 cd PrismLauncher
 cd instances
-rmdir /s /q PlasmaticPack
-curl.exe -Lo installplasmatic.exe "https://drive.usercontent.google.com/download?id=1kCPT8BDzPTv5Ic7ezvH6bMDs99JGWGbb&export=download&authuser=0&confirm=t&uuid=b84b92a0-414e-429e-85f9-78c781ea3dbb&at=APZUnTWK4QCi2mDi9jSYItqoLshZ:1714177195087"
+rmdir /s /q TSTPack
+curl.exe -Lo installTST.exe "https://drive.usercontent.google.com/download?id=1kCPT8BDzPTv5Ic7ezvH6bMDs99JGWGbb&export=download&authuser=0&confirm=t&uuid=b84b92a0-414e-429e-85f9-78c781ea3dbb&at=APZUnTWK4QCi2mDi9jSYItqoLshZ:1714177195087"
 echo.
-echo Installing Plasmatic Pack....
+echo Installing TSTPack....
 echo.
-start installplasmatic.exe
+start installTST.exe
 echo A 7-Zip window should have opened. Please select 'Extract' and then 'Yes to All' (if applicable)
 echo Please continue only once the extraction is completed.
 pause
-del /q installplasmatic.exe
+del /q installTST.exe
 echo.
 echo Installation complete. Proceeding to update modpack....
 pause
-goto UpdatePlasmatic
+goto UpdateTST
 
 :Update
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher
 echo.
 echo Which modpack would you like to update?
-echo 1. Plasmatic Pack
+echo 1. TSTPack
 choice /c 1 /n /m ">> "
-if errorlevel 1 goto UpdatePlasmatic
+if errorlevel 1 goto UpdateTST
 
-:UpdatePlasmatic
+:UpdateTST
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher
 echo.
-echo Downloading Plasmatic Pack....
+echo Downloading TSTPack....
 echo.
 cd %appdata%
 cd PrismLauncher
 cd instances
-cd PlasmaticPack
+cd TSTPack
 cd .minecraft
 rmdir /s /q mods
-curl.exe -Lo updateplasmatic.exe "https://drive.usercontent.google.com/download?id=1NzHtV0TxGyHJBc84kYRdl9tW83rFsCKe&export=download&authuser=0&confirm=t&uuid=92e8f110-ae7d-421e-b83b-03d24176c3a9&at=APZUnTUADRIXkssz22JAGi2caEin:1714177258648"
+curl.exe -Lo updateTST.exe "https://drive.usercontent.google.com/download?id=1NzHtV0TxGyHJBc84kYRdl9tW83rFsCKe&export=download&authuser=0&confirm=t&uuid=92e8f110-ae7d-421e-b83b-03d24176c3a9&at=APZUnTUADRIXkssz22JAGi2caEin:1714177258648"
 echo.
-echo Updating Plasmatic Pack....
+echo Updating TSTPack....
 echo.
-start updateplasmatic.exe
+start updateTST.exe
 echo A 7-Zip window should have opened. Please select 'Extract' and then 'Yes to All' (if applicable).
 echo Please continue only once the extraction is completed.
 pause
-del /q updateplasmatic.exe
+del /q updateTST.exe
 echo.
 echo Update complete. Returning to main menu....
 pause
@@ -196,21 +197,23 @@ goto Start
 
 :Launch
 cls
-echo DebugDan's Modpack Launcher
+echo MPLauncher
 echo.
-echo NOTE: If a window pops up asking you to "Choose your offline mode player name", try relaunching. If it says the same thing again, you have to hit 'Cancel' and re-link your Microsoft Account by selecting option 4 in the main menu!
+echo NOTE: If a window pops up asking you to "Choose your offline mode player name", try relaunching. 
+echo If it says the same thing again, you have to hit 'Cancel' and re-link your Microsoft Account by selecting option 4 in the main menu.
 echo.
 echo Select a modpack to launch:
-echo 1. Plasmatic Pack
+echo 1. TSTPack
 echo 2. Return to main menu
 choice /c 12 /n /m ">> "
 if errorlevel 2 goto Start
-if errorlevel 1 goto StartPlasmatic
+if errorlevel 1 goto StartTST
 
-:StartPlasmatic
+:StartTST
 cls
 cd %localappdata%
 cd Programs
 cd PrismLauncher
-start prismlauncher.exe --launch "PlasmaticPack"
+start prismlauncher.exe --launch "TSTPack"
 exit
+
