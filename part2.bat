@@ -5,7 +5,7 @@ goto Start
 
 :Start
 cls
-echo MPLauncher  (L24.7.4)
+echo MPLauncher  (L24.7.4b)
 echo.
 echo Please select an option:
 echo 1. Launch an installed modpack
@@ -156,7 +156,7 @@ cd %appdata%
 cd PrismLauncher
 cd instances
 rmdir /s /q TSTPack
-curl.exe -Lo installTST.exe "https://drive.usercontent.google.com/download?id=1kCPT8BDzPTv5Ic7ezvH6bMDs99JGWGbb&export=download&authuser=0&confirm=t&uuid=b84b92a0-414e-429e-85f9-78c781ea3dbb&at=APZUnTWK4QCi2mDi9jSYItqoLshZ:1714177195087"
+curl.exe -Lo installTST.exe "https://github.com/Debug-Dan/mplauncher/releases/download/TSTPack/installTST.exe"
 echo.
 echo Installing TSTPack....
 echo.
@@ -193,7 +193,7 @@ cd instances
 cd TSTPack
 cd .minecraft
 rmdir /s /q mods
-curl.exe -Lo updateTST.exe "https://drive.usercontent.google.com/download?id=1NzHtV0TxGyHJBc84kYRdl9tW83rFsCKe&export=download&authuser=0&confirm=t&uuid=92e8f110-ae7d-421e-b83b-03d24176c3a9&at=APZUnTUADRIXkssz22JAGi2caEin:1714177258648"
+curl.exe -Lo updateTST.exe "https://github.com/Debug-Dan/mplauncher/releases/download/TSTPack/updateTST.exe"
 echo.
 echo Updating TSTPack....
 echo.
