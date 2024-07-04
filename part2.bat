@@ -5,21 +5,29 @@ goto Start
 
 :Start
 cls
-echo MPLauncher  (L24.7.3)
+echo MPLauncher  (L24.7.4)
 echo.
 echo Please select an option:
-echo 1. Launch a modpack
+echo 1. Launch an installed modpack
 echo 2. Update an existing modpack
 echo 3. Install a new modpack
 echo 4. Link/re-link Microsoft Account
 echo 5. Install/update Prism Launcher
+echo 6. Open MC install directory
 echo.
-choice /c 12345 /n /m ">> "
+choice /c 123456 /n /m ">> "
+if errorlevel 6 goto Directory
 if errorlevel 5 goto PrismLauncher
 if errorlevel 4 goto MicrosoftAccount
 if errorlevel 3 goto Install
 if errorlevel 2 goto Update
 if errorlevel 1 goto Launch
+
+:Directory
+cls
+start %windir%\explorer.exe "%appdata%\PrismLauncher\instances"
+popd
+goto Start
 
 :PrismLauncher
 cls
@@ -133,7 +141,9 @@ echo MPLauncher
 echo.
 echo Which modpack would you like to install?
 echo 1. TSTPack
-choice /c 1 /n /m ">> "
+echo 2. Return to main menu
+choice /c 12 /n /m ">> "
+if errorlevel 2 goto Start
 if errorlevel 1 goto InstallTST
 
 :InstallTST
@@ -166,7 +176,9 @@ echo MPLauncher
 echo.
 echo Which modpack would you like to update?
 echo 1. TSTPack
-choice /c 1 /n /m ">> "
+echo 2. Return to main menu
+choice /c 12 /n /m ">> "
+if errorlevel 2 goto Start
 if errorlevel 1 goto UpdateTST
 
 :UpdateTST
@@ -199,8 +211,8 @@ goto Start
 cls
 echo MPLauncher
 echo.
-echo NOTE: If a window pops up asking you to "Choose your offline mode player name", try relaunching. 
-echo If it says the same thing again, you have to hit 'Cancel' and re-link your Microsoft Account by selecting option 4 in the main menu.
+echo NOTE: If a window pops up asking you to "Choose your offline mode player name",
+echo you may need to re-link your Microsoft Account by hitting option 4 on the main menu.
 echo.
 echo Select a modpack to launch:
 echo 1. TSTPack
