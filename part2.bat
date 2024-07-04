@@ -5,7 +5,7 @@ goto Start
 
 :Start
 cls
-echo MPLauncher  (L24.7.4b)
+echo MPLauncher  (L24.7.4c)
 echo.
 echo Please select an option:
 echo 1. Launch an installed modpack
@@ -30,6 +30,22 @@ popd
 goto Start
 
 :PrismLauncher
+cls
+echo MPLauncher
+echo.
+echo The following guided setup will install the following:
+echo Microsoft Visual C++ (dependency)
+echo Eclipse Adoptium (Java) (dependency)
+echo Prism Launcher (dependency)
+echo.
+echo Are you sure you want to proceed?
+echo 1. Yes
+echo 2. No
+choice /c 12 /n /m ">> "
+if errorlevel 2 goto Start
+if errorlevel 1 goto PrismLauncherConfirm
+
+:PrismLauncherConfirm
 cls
 echo MPLauncher
 echo.
@@ -103,12 +119,12 @@ goto Start
 cls
 echo MPLauncher
 echo.
-popd
-curl.exe -Lo part3.bat https://debug-dan.github.io/mplauncher/part3.bat
-start part3.bat
-cls
-echo MPLauncher
+echo Upon proceeding, Prism Launcher will open automatically.
+echo Please return to this window to view the instructions.
 echo.
+pause
+popd
+start part3.bat
 echo Prism Launcher should have just opened. Follow these instructions:
 echo 1 - Hit the account name in the top right corner and select 'Manage Accounts'
 echo 2 - Select 'Add Microsoft' on the top right. 
@@ -211,8 +227,8 @@ goto Start
 cls
 echo MPLauncher
 echo.
-echo NOTE: If a window pops up asking you to "Choose your offline mode player name",
-echo you may need to re-link your Microsoft Account by hitting option 4 on the main menu.
+echo NOTE: If a window pops up asking you to "Choose your offline mode player name", try relaunching.
+echo If that doesn't work, you may need to re-link your Microsoft Account by hitting option 4 on the main menu.
 echo.
 echo Select a modpack to launch:
 echo 1. TSTPack
