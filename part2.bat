@@ -1,12 +1,14 @@
 @echo off
 title MPLauncher
 pushd
+cd..
+curl.exe -o MPLauncher.bat https://debug-dan.github.io/mplauncher/MPLauncher.bat
 goto Start
 
 :Start
 popd
 cls
-echo MPLauncher  (L24.7.4g)
+echo MPLauncher  (L24.7.4h)
 echo.
 echo Please select an option:
 echo 1. Launch an installed modpack
