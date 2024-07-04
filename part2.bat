@@ -6,7 +6,7 @@ goto Start
 :Start
 popd
 cls
-echo MPLauncher  (L24.7.4e)
+echo MPLauncher  (L24.7.4f)
 echo.
 echo Please select an option:
 echo 1. Launch an installed modpack
@@ -22,7 +22,7 @@ if errorlevel 5 goto PrismLauncher
 if errorlevel 4 goto MicrosoftAccount
 if errorlevel 3 goto Install
 if errorlevel 2 goto Update
-if errorlevel 1 goto Launch
+if errorlevel 1 goto StartList
 
 :Directory
 cls
@@ -224,7 +224,7 @@ echo Update complete. Returning to main menu....
 pause
 goto Start
 
-:Launch
+:StartList
 cls
 echo MPLauncher
 echo.
