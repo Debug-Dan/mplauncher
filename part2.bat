@@ -8,7 +8,7 @@ goto Start
 :Start
 popd
 cls
-echo MPLauncher  (L24.7.4h)
+echo MPLauncher  (L24.7.4i)
 echo.
 echo Please select an option:
 echo 1. Launch an installed modpack
@@ -127,6 +127,7 @@ echo Please return to this window to view the instructions.
 echo.
 pause
 popd
+cd mplauncher-files
 start part3.bat
 echo Prism Launcher should have just opened. Follow these instructions:
 echo 1 - Hit the account name in the top right corner and select 'Manage Accounts'
