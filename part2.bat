@@ -6,7 +6,7 @@ goto Start
 :Start
 popd
 cls
-echo MPLauncher  (L24.7.4f)
+echo MPLauncher  (L24.7.4g)
 echo.
 echo Please select an option:
 echo 1. Launch an installed modpack
@@ -17,12 +17,12 @@ echo 5. Install/update Prism Launcher
 echo 6. Open MC install directory
 echo.
 choice /c 123456 /n /m ">> "
-if errorlevel 6 goto Directory
-if errorlevel 5 goto PrismLauncher
-if errorlevel 4 goto MicrosoftAccount
-if errorlevel 3 goto Install
-if errorlevel 2 goto Update
-if errorlevel 1 goto StartList
+if "%ERRORLEVEL%" == "1" goto Launch
+if "%ERRORLEVEL%" == "2" goto Update
+if "%ERRORLEVEL%" == "3" goto Install
+if "%ERRORLEVEL%" == "4" goto MicrosoftAccount
+if "%ERRORLEVEL%" == "5" goto PrismLauncher
+if "%ERRORLEVEL%" == "6" goto Directory
 
 :Directory
 cls
@@ -43,8 +43,8 @@ echo Are you sure you want to proceed?
 echo 1. Yes
 echo 2. No
 choice /c 12 /n /m ">> "
-if errorlevel 2 goto Start
-if errorlevel 1 goto PrismLauncherConfirm
+if "%ERRORLEVEL%" == "1" goto PrismLauncherConfirm
+if "%ERRORLEVEL%" == "2" goto Start
 
 :PrismLauncherConfirm
 cls
@@ -149,8 +149,8 @@ echo Are you sure you want to proceed?
 echo 1. Yes
 echo 2. No
 choice /c 12 /n /m ">> "
-if errorlevel 2 goto Start
-if errorlevel 1 goto ConfirmInstall
+if "%ERRORLEVEL%" == "1" goto ConfirmInstall
+if "%ERRORLEVEL%" == "2" goto Start
 
 :ConfirmInstall
 cls
@@ -160,8 +160,8 @@ echo Which modpack would you like to install?
 echo 1. TSTPack
 echo 2. Return to main menu
 choice /c 12 /n /m ">> "
-if errorlevel 2 goto Start
-if errorlevel 1 goto InstallTST
+if "%ERRORLEVEL%" == "1" goto InstallTST
+if "%ERRORLEVEL%" == "2" goto Start
 
 :InstallTST
 cls
@@ -195,8 +195,8 @@ echo Which modpack would you like to update?
 echo 1. TSTPack
 echo 2. Return to main menu
 choice /c 12 /n /m ">> "
-if errorlevel 2 goto Start
-if errorlevel 1 goto UpdateTST
+if "%ERRORLEVEL%" == "1" goto UpdateTST
+if "%ERRORLEVEL%" == "2" goto Start
 
 :UpdateTST
 cls
@@ -224,7 +224,7 @@ echo Update complete. Returning to main menu....
 pause
 goto Start
 
-:StartList
+:Launch
 cls
 echo MPLauncher
 echo.
@@ -235,8 +235,8 @@ echo Select a modpack to launch:
 echo 1. TSTPack
 echo 2. Return to main menu
 choice /c 12 /n /m ">> "
-if errorlevel 2 goto Start
-if errorlevel 1 goto StartTST
+if "%ERRORLEVEL%" == "1" goto StartTST
+if "%ERRORLEVEL%" == "2" goto Start
 
 :StartTST
 cls
